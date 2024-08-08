@@ -1,0 +1,66 @@
+.recommendations {
+    margin-top: 40px;
+    background: #eee;
+    padding: 40px 0;
+  }
+
+.recommendations h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+.accordion-contents {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+.accordion {
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  .accordion.active, .accordion:hover {
+    background: #e67315;
+  }
+  
+ .panel {
+    display: none;
+    background: #fff;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .panel p {
+    background: #fff;
+    padding: 20px;
+    min-height: 258px;
+  }
+  
+ .panel.show {
+    display: block;
+  }
+  
+/* Responsive Design */
+@media (max-width: 1440px) {
+  .accordion-contents {
+    grid-template-columns: 1fr;
+  }
+  .panel p {
+    background: #fff;
+    padding: 20px;
+    min-height: 110px;
+  }
+}
