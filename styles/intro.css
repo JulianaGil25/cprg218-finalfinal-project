@@ -3,7 +3,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 32px;
     padding: 10px;
 }
 
@@ -12,16 +12,63 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     width: 100%;
+    min-width: 512px;
 }
 
-.intro .texts h1 {
-    font-size: 36px;
+.intro .tabs {
+    min-width: 360px;
+    position:relative;
+    z-index: 99;
 }
 
-.intro .texts p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 15px;
+.intro .tab-button {
+    font-size: 16px;
+    width: 114px;
+    padding: 10px 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: #eee;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.intro .tab-button:hover {
+    background: #e67315;
+    color:#fff;
+}
+
+.intro .tab-button.active {
+    color:#e67315;
+    background: #fff;
+    font-weight: bold;
+    cursor: default;
+    border-bottom: 1px solid #fff;
+}
+
+.intro .tab-button.active:hover {
+    color:#e67315;
+}
+
+.intro .tab-content {
+    border: 1px solid #ccc;
+    padding: 36px;
+    min-width: 502px;
+    min-height: 377px;
+    display: none;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    position:relative;
+    top: -1px;
+    z-index: 9;
+}
+
+.intro .tab-content.active {
+    display: block;
+}  
+
+.tab-content p {
+    line-height: 22px;
+    margin-bottom: 14px;
 }
 
 @media (max-width: 768px) {
@@ -29,12 +76,7 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    .intro .texts h1 {
-        font-size: 20px;
-    }
-    .intro .texts p {
-        font-size: 16px;
-        line-height: 20px;
-        margin-top: 15px;
+    .intro .tab-content {
+        min-height: auto;
     }
 }
