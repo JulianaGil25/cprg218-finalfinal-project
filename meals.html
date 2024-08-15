@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Recommendations & recipes</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/heading.css" />
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+    <link rel="stylesheet" type="text/css" href="style-2do/stylesheet.css"/>
+
+   
+    <script src="js/index.js"></script>
+
+</head>
+
+<body>
+    <section class="heading">
+        <div class="logo"><img src="./images/baby-carrot.png" alt="Baby Carrot logo"></div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="index.html">About Us</a></li>
+            <li class="nav-item"><a href="ourteam.html">Our Team</a></li>
+            <li class="nav-item"><a href="#video">Video</a></li>
+            <li class="nav-item"><a href="meals.html">Meals</a></li>
+          </ul>
+          <!-- Use this nav list to display for mobile-->
+          <ul class="nav-list-mobile" id="nav-list-mobile">
+            <!-- fa-reguler -->
+            <li class="nav-item-mobile"><a href="#home"><i class="fa-regular fa-house"></i><i class="fa-regular fa-font-awesome"></i></a></li>
+            <li class="nav-item-mobile"><a href="#about"><i class="fa-regular fa-people-group"></i></a></li>
+            <li class="nav-item-mobile"><a href="#our team"><i class="fa-regular fa-calendar-xmark"></i></a></li>
+            <li class="nav-item-mobile"><a href="#video"><i class="fa-regular fa-address-card"></i></a></li>
+            <li class="nav-item-mobile"><a href="#meals"><i class="fa-regular fa-money-bill-1"></i></a></li>
+          </ul>
+        </nav>
+        <div onclick="onClickNavMobileButton();" class="nav-item-mobile-button"><i class="fa-solid fa-bars"></i></div>
+      </section>
+      <h3>Select a Meal Category</h3>
+      <P> Learn the meaning of each category</P> 
+
+      <select id="categoryDropdown" onchange="showCategoryInfo()">
+          <option value="">Select a category...</option>
+      </select>
+      <div id="categoryInfo"></div>
+        </select>
+        <div id="meals-list" class="card-container"></div>
+    </div>
+
+    
+
+</body>
+</html>
